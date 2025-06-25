@@ -34,8 +34,8 @@ app.use(morgan('tiny', {
 
 
 app.use('/api/auth', require('./routes/authRoutes'));
+// app.use('/api/users', require('./routes/userRoutes'));
 // app.use('/api/posts');
-// app.use('/api/users');
 
 app.get('/', (req, res)=> {
     res.send('Welcome to the Blog API');
