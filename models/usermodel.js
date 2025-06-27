@@ -26,7 +26,9 @@ const userSchema = new mongoose.Schema({
   },
   profileImage: {
     type: String,
-    default: "",
+    default: function () {
+      return `https://api.dicebear.com/7.x/adventurer/png?seed=${this.username}`;
+    },
   },
 
   createdAt: {

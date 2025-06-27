@@ -4,7 +4,6 @@ const router = express.Router();
 const {getUserProfile, updateUserProfile, getAllUsers, deleteUser} = require('../controllers/usercontroller');
 const upload = require('../middlewares/uploadMiddleware');
 
-
 const {protect, admin} = require('../middlewares/authMiddleware');
 
 

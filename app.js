@@ -14,7 +14,10 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/users', require('./routes/userRoutes'));
-// app.use('/api/posts'); 
+app.use('/api/posts', require('./routes/postRoutes')); 
+app.use('/api/posts', require('./routes/commentRoutes'));
+app.use('/api/posts', require('./routes/likesRoutes')); 
+
 
 app.get('/', (req, res) => {
   res.send('Welcome to the Blog API');
